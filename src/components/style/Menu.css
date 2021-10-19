@@ -1,0 +1,13 @@
+.menu {
+  border-right: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 8%;
+  height: 950px;
+}
+
+.home, .about, .contact, .projects {
+  text-align: center;
+  border-bottom: 1px solid red;
+} 
