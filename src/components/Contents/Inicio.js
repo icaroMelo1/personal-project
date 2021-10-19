@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './style/Inicio.css';
 
-export class Inicio extends Component {
+class Inicio extends Component {
   render() {
     return (
       <div className="template">
@@ -27,4 +27,4 @@ export class Inicio extends Component {
   }
 }
 
-export default Inicio
+export default Inicio;
