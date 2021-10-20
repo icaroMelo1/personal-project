@@ -1,11 +1,23 @@
-import React from 'react';
+import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 import Context from './services/Context';
 
-export default function Provider({ children }) {
-    return (
-      <Context.Provider>
-        { children }
-      </Context.Provider>
-    )
-
+function Provider({ children }) {
+  const [Body, setBody] = useState('.home');
+  
+  return (
+    <Context.Provider value={ {
+      Body,
+      setBody
+    } }
+    >
+      { children }
+    </Context.Provider>
+  )
 }
+
+Provider.propTypes = {
+  children: PropTypes.node.isRequired,
+};
+
+export default Provider;
