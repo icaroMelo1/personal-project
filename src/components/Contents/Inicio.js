@@ -5,7 +5,7 @@ class Inicio extends Component {
   render() {
     return (
       <div className="template">
-        <div class="inside-paragrafo">
+        <div className="inside-paragrafo">
           <p>
             - Tenho 20 anos, sou natural de Fortaleza-ce, sempre gostei muito de jogos e da tecnologia envolvida, hoje faço Eng.Mecatronica no IFCE e o curso da Trybe.
           </p>

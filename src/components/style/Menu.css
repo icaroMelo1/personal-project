@@ -1,10 +1,10 @@
 .menu {
   border-right: 1px solid black;
   display: flex;
-  flex-direction: column;
-  gap: 15px;
+  flex-direction: row;
+  gap: 50px;
   text-align: center;
-  height: 950px;
+  justify-content: center;
 }
 
 .home, .about, .contact, .projects {

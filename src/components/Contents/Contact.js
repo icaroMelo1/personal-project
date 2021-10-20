@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
+import './style/Inicio.css';
 
 class Contact extends Component {
   render() {
     return (
-      <div>
+      <div className="template">
         <div>
           <h4>Contato:</h4>
           <p>Email: icarodmelof@gmail.com</p>

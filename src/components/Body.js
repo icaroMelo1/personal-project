@@ -1,36 +1,81 @@
 import React, { useContext } from 'react';
 import './style/Body.css';
 import Context from './services/Context';
-import Menu from './Menu';
 import Inicio from './Contents/Inicio';
 import Contact from './Contents/Contact';
 import Projects from './Contents/Projects';
 import About from './Contents/About';
 
+const about = '.about';
+const home = '.home';
+const contact = '.contact';
+const projects = '.projects';
+
 function BodyPage() {
-  const { Body } = useContext(Context)
+  const { Body, setBody } = useContext(Context);
+
   function renderWithState() {
-    if(Body === '.home') {
-      return ( <Inicio />)
+    if(Body === home) {
+      return (<Inicio />)
     }
-    if(Body === '.contact') {
-      return ( <Contact />)
+    if(Body === contact) {
+      return (<Contact />)
     }
-    if(Body === '.projects') {
-      return ( <Projects />)
+    if(Body === projects) {
+      return (<Projects />)
     }
-    if(Body === '.about') {
-      return ( <About />)
+    if(Body === about) {
+      return (<About />)
     }
   }
 
+  function nextPart() {
+    if(Body === home) {
+      setBody(about)
+    }
+    if(Body === about) {
+      setBody(contact)
+    }
+    if(Body === contact) {
+      setBody(projects)
+    }
+    if(Body === projects) {
+      setBody(home)
+    }
+  }
+
+  function lastPart() {
+    if(Body === home) {
+      setBody(projects)
+    }
+    if(Body === about) {
+      setBody(home)
+    }
+    if(Body === contact) {
+      setBody(about)
+    }
+    if(Body === projects) {
+      setBody(contact)
+    }
+  }
+  
+
   return (
     <div className="body">
-      <Menu />
       <div className="midbody">
-        <button>Tras</button>
+        <button
+          className="changebutton"
+          onClick={ () => lastPart() }
+        >
+          Tras
+        </button>
         { renderWithState() }
-        <button>Frente</button>
+        <button
+          className="changebutton"
+          onClick={ () => nextPart() }
+        >
+          Frente
+        </button>
       </div>
     </div>
   )

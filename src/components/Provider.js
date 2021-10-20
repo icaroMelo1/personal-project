@@ -4,11 +4,14 @@ import Context from './services/Context';
 
 function Provider({ children }) {
   const [Body, setBody] = useState('.home');
-  
+  const [hideMenu, sethideMenu] = useState('yes')
+
   return (
     <Context.Provider value={ {
       Body,
-      setBody
+      setBody,
+      hideMenu,
+      sethideMenu
     } }
     >
       { children }

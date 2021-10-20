@@ -1,9 +1,27 @@
-import React, { Component } from 'react'
+import React, { useContext } from 'react'
+import Menu from './Menu';
+import Context from './services/Context';
 import './style/Header.css';
 
-class Header extends Component {
-  render() {
-    return (
+function Header() {
+  const { hideMenu, sethideMenu } = useContext(Context);
+
+  function hideMenuByState() {
+    if(hideMenu === 'yes') {
+      sethideMenu('no')
+    } else {
+      sethideMenu('yes')
+    }
+  }
+
+  function returnMenu() {
+    if(hideMenu === 'no') {
+      return <Menu />
+    }
+  }
+
+  return (
+    <>
       <div className="header">
         <div className="image">
           image 
@@ -13,12 +31,17 @@ class Header extends Component {
             Icaro Melo
           </h1>
         </div>
-        <div className="anythingForComplete">
-          Anything
-        </div>
+        <button
+          onClick={ () => hideMenuByState() }
+        >
+          -
+          -
+          -
+        </button>
       </div>
-    )
-  }
+      { returnMenu() }
+    </>
+  )
 }
 
 export default Header;
