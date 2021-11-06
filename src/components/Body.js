@@ -70,7 +70,9 @@ function BodyPage() {
          <img alt='voltar' src={img} className="back-btt"/>
         </button>
       <div className="midbody">
-        { renderWithState() }
+        <div className="insidemidbody">
+          { renderWithState() }
+        </div>
       </div>
         <button
           className="changebutton"

@@ -2,6 +2,14 @@ body {
   background-color: rgb(176, 234, 240);
 }
 
+button {
+  background-color: #63E9F2;
+  border: 2.5px solid black;
+  border-radius: 5px;
+  font-size: medium;
+  font-weight: bold;
+}
+
 .body {
   align-items: center;
   display: flex;
@@ -14,7 +22,8 @@ body {
 .midbody {
   align-content: center;
   align-items:  baseline;
-  border: 1px solid green;
+  border: none;
+  box-shadow: 25px 30px 10px -15px #0EA4FB;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -22,6 +31,10 @@ body {
   max-width: 70%;
   min-height: 40%;
   min-width: 40%;
+}
+
+.insidemidbody {
+  box-shadow: -25px -30px 10px -15px #0EA4FB;
 }
 
 .changebutton {

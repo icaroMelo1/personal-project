@@ -1,9 +1,7 @@
 .template {
-  border: 1px solid orangered;
   display: flex;
   justify-content: center;
-  margin-top: 2%;
-  margin-bottom: 1%;
+  margin: 2% 0 1% 2%;
   width: 70%;
 }
 .inside-paragrafo {

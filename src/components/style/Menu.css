@@ -4,7 +4,7 @@
   flex-direction: row;
   gap: 50px;
   margin-top: 1%;
-  margin-bottom: 1%;
+  margin-bottom: 3%;
   text-align: center;
   justify-content: center;
 }
@@ -12,5 +12,4 @@
 .home, .about, .contact, .projects {
   text-align: center;
   width: 150px;
-  border-bottom: 1px solid red;
 } 
