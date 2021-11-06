@@ -34,9 +34,7 @@ function Header() {
         <button
           onClick={ () => hideMenuByState() }
         >
-          -
-          -
-          -
+          Opções
         </button>
       </div>
       { returnMenu() }

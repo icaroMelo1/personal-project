@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+import img from './images/right-arrow.png';
 import './style/Body.css';
 import Context from './services/Context';
 import Inicio from './Contents/Inicio';
@@ -62,21 +63,21 @@ function BodyPage() {
 
   return (
     <div className="body">
-      <div className="midbody">
         <button
           className="changebutton"
           onClick={ () => lastPart() }
         >
-          Tras
+         <img alt='voltar' src={img} className="back-btt"/>
         </button>
+      <div className="midbody">
         { renderWithState() }
+      </div>
         <button
           className="changebutton"
           onClick={ () => nextPart() }
         >
-          Frente
+          <img alt='frente' src={img} className="front-btt"/>
         </button>
-      </div>
     </div>
   )
 }

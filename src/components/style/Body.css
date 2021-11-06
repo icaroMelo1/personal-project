@@ -1,5 +1,14 @@
+body {
+  background-color: rgb(176, 234, 240);
+}
+
 .body {
+  align-items: center;
   display: flex;
+  gap: 50px;
+  justify-content: center;
+  text-align: center;
+  margin-top: 1%;
 }
 
 .midbody {
@@ -8,6 +17,25 @@
   border: 1px solid green;
   display: flex;
   flex-direction: row;
-  gap: 15px;
   justify-content: center;
+  max-height: 60%;
+  max-width: 70%;
+  min-height: 40%;
+  min-width: 40%;
+}
+
+.changebutton {
+  background: none;
+  border: none;
+  width: 100px;
+  height: 100px;
+}
+
+.back-btt {
+  transform: rotate(180deg)
+}
+
+.back-btt, .front-btt {
+  width: 80px;
+  height: 80px;
 }
