@@ -1,3 +1,4 @@
+import { BrowserRouter } from 'react-router-dom';
 import './App.css';
 import Provider from './components/Provider';
 import Body from './components/Body';
@@ -6,11 +7,13 @@ import Header from './components/Header';
 
 function App() {
   return (
-   <Provider>
-      <Header />
-      <Body />
-      <Footer />
-    </Provider>
+  <BrowserRouter basename={process.env.PUBLIC_URL}>
+    <Provider>
+        <Header />
+        <Body />
+        <Footer />
+      </Provider>
+  </BrowserRouter>
   );
 }
 
